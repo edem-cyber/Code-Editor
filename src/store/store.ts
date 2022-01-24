@@ -1,7 +1,6 @@
 import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
-import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE } from 'redux-persist/es/constants';
-import persistStore from 'redux-persist/es/persistStore';
-import { TypeOfExpression } from 'typescript';
+import { persistStore } from 'redux-persist';
+import { FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER } from 'redux-persist/es/constants';
 import persistedReducer from './persistConfig';
 
 const ignoredActions = [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER];
@@ -14,7 +13,8 @@ const store = configureStore({
   }),
   devTools: process.env.NODE_ENV !== 'production',
 });
+
 export const persistor = persistStore(store);
 export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch; 
+export type AppDispatch = typeof store.dispatch;
 export default store;

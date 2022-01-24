@@ -1,0 +1,20 @@
+import React from 'react';
+import { makeStyles } from '@material-ui/core';
+import SignOut from '../../../auth/SignOut';
+
+const AuthenticatedButtons = () => {
+  const classes = useStyles();
+  return (
+    <div className={classes.root}>
+      <div className="">Open Workspace</div>
+      <SignOut />
+    </div>
+  );
+};
+
+const useStyles = makeStyles(() => ({
+  root: {
+    display: 'flex',
+  },
+}));
+export default AuthenticatedButtons;

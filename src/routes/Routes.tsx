@@ -4,17 +4,8 @@ import { Switch, Route, Redirect } from 'react-router';
 import ProtectedRoute from '../auth/ProtectedRoute';
 import Loading from '../components/common/Loading/Loading';
 import routez from './routez';
-
-const useStyles = makeStyles(() => ({
-  main: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  page: {
-    height: '100%',
-  },
-}));
+import Header from '../components/common/Header/Header';
+import Home from '../pages/Home/Home';
 
 export const Routes = () => {
   const { isAuthenticated, isLoading } = useAuth0();
@@ -22,19 +13,33 @@ export const Routes = () => {
   if (isLoading) {
     return <Loading />;
   }
+  const CodeEditor = () => <div> Code Editor</div>;
   return (
-    <div className="classes.main">
-      <div>Header</div>
-      <div className="classes.page">
+    <div className={classes.main}>
+      <Header />
+      <div className={classes.page}>
         <Switch>
-          <ProtectedRoute exact path={routez.codeEditor} component={<div>Code editor</div>} />
+          <ProtectedRoute exact path={routez.codeEditor}>
+            {CodeEditor}
+          </ProtectedRoute>
           <Route exact path={routez.home}>
-            {isAuthenticated ? <Redirect to={routez.codeEditor} /> : <div>Home</div>}
+            {isAuthenticated ? <Redirect to={routez.codeEditor} /> : <Home />}
           </Route>
         </Switch>
       </div>
     </div>
   );
 };
+
+const useStyles = makeStyles(() => ({
+  main: {
+    height: '100vh',
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  page: {
+    height: '100%',
+  },
+}));
 
 export default Routes;
