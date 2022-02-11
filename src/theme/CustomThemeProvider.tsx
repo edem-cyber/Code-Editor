@@ -24,7 +24,7 @@ declare module '@material-ui/core/styles' {
     background: string;
     font: string;
   }
-  
+
   interface ThemeOptions {
     background: string;
     font: string;

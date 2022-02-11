@@ -6,10 +6,10 @@ export const commonColors = {
 export const appColors = {
   background: commonColors.white,
   font: commonColors.black,
-  primary: '#203040',
+  primary: '#204030',
 };
 
 export const darkModeColors = {
-  background: '#232B32',
+  background: '#172417',
   font: commonColors.white,
 };

@@ -6,7 +6,7 @@ const Home = () => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <div className={classes.welcomeMessage}>Welcome to the code editor</div>
+      <div className={classes.welcomeMessage}>Matrix Code Editor</div>
       <ProgrammingLangList/>
     </div>
   );
