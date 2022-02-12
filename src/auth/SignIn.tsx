@@ -1,24 +1,21 @@
 import { useAuth0 } from '@auth0/auth0-react';
-import { Button, makeStyles } from '@material-ui/core';
-import { commonColors } from '../theme/colors';
+import { Button, styled } from '@material-ui/core';
+import { AuthButton } from './AuthButtons';
 
 const SignIn = () => {
   const { loginWithPopup } = useAuth0();
-  const classes = useStyles();
+  // const classes = useStyles();
   const onSignIn = () => {
     loginWithPopup();
   };
   return (
-    <Button onClick={onSignIn} className={classes.button}>
+    <AuthButton onClick={onSignIn}>
       Sign In
-    </Button>
+    </AuthButton>
   );
 };
 
-const useStyles = makeStyles(() => ({
-  button: {
-    color: commonColors.white,
-  },
-}));
+
+
 
 export default SignIn;

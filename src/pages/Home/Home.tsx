@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div className={classes.root}>
       <div className={classes.welcomeMessage}>Welcome to the Matrix</div>
-      <ProgrammingLangList/>
+      <ProgrammingLangList />
     </div>
   );
 };
@@ -16,11 +16,13 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: 'flex',
     flexDirection: 'column',
-    height: '100%',fontWeight:'bold',
+    height: '100%',
+    fontWeight: 'bold',
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: theme.background,
   },
+
   welcomeMessage: {
     padding: '15px',
     fontSize: '30px',
