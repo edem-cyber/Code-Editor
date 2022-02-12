@@ -14,6 +14,7 @@ export const Routes = () => {
     return <Loading />;
   }
   const CodeEditor = () => <div> Code Editor</div>;
+
   return (
     <div className={classes.main}>
       <Header />

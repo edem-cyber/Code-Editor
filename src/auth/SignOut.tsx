@@ -19,7 +19,7 @@ const SignOut = () => {
 
 const useStyles = makeStyles(() => ({
   button: {
-    colors: commonColors.white,
+    color: commonColors.white,
   },
 }));
 

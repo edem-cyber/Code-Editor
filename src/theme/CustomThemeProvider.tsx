@@ -10,6 +10,7 @@ const CustomThemeProvider = (props: PropsWithChildren<{}>) => {
       type: darkMode ? 'dark' : 'light',
       primary: {
         main: appColors.primary,
+        
       },
     },
     background: darkMode ? darkModeColors.background : appColors.background,

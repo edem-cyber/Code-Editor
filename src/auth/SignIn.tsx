@@ -9,7 +9,7 @@ const SignIn = () => {
     loginWithPopup();
   };
   return (
-    <Button className={classes.button} onClick={onSignIn}>
+    <Button onClick={onSignIn} className={classes.button}>
       Sign In
     </Button>
   );
@@ -17,7 +17,7 @@ const SignIn = () => {
 
 const useStyles = makeStyles(() => ({
   button: {
-    colors: commonColors.white,
+    color: commonColors.white,
   },
 }));
 

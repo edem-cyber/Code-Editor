@@ -7,13 +7,12 @@ import DarkModeIcon from '@material-ui/icons/Brightness2';
 import UnauthenticatedButtons from './UnauthenticatedButtons';
 import AuthenticatedButtons from './AuthenticatedButtons';
 
-
 const Header = () => {
   const { isAuthenticated } = useAuth0();
   const dispatch = useAppDispatch();
   const darkMode = useAppSelector((state) => state.darkMode);
   const onChangeDarkMode = () => {
-    dispatch(toggleDarkMode());
+    dispatch(toggleDarkMode()); 
   };
   const classes = useStyles();
 
@@ -25,7 +24,7 @@ const Header = () => {
         </Typography>
         <DarkModeIcon />
         <Switch onChange={onChangeDarkMode} color="default" checked={darkMode} />
-        {isAuthenticated ? <AuthenticatedButtons/> : <UnauthenticatedButtons/>}
+        {isAuthenticated ? <AuthenticatedButtons /> : <UnauthenticatedButtons />}
       </Toolbar>
     </AppBar>
   );
