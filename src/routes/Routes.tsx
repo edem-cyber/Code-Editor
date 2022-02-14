@@ -6,6 +6,7 @@ import Loading from '../components/common/Loading/Loading';
 import routez from './routez';
 import Header from '../components/common/Header/Header';
 import Home from '../pages/Home/Home';
+import CodeEditor from '../pages/Home/CodeEditor/CodeEditor';
 
 export const Routes = () => {
   const { isAuthenticated, isLoading } = useAuth0();
@@ -13,7 +14,6 @@ export const Routes = () => {
   if (isLoading) {
     return <Loading />;
   }
-  const CodeEditor = () => <div> Code Editor</div>;
 
   return (
     <div className={classes.main}>

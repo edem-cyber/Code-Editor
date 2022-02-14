@@ -2,7 +2,7 @@ import React from 'react';
 import { AppBar, makeStyles, Switch, Toolbar, Typography } from '@material-ui/core';
 import { useAppDispatch, useAppSelector } from '../../../store/hooks';
 import { useAuth0 } from '@auth0/auth0-react';
-import { toggleDarkMode } from '../../../store/darkMode/reducer';
+import { toggleDarkMode } from '../../../store/reducers/darkMode/reducer';
 import DarkModeIcon from '@material-ui/icons/Brightness2';
 import UnauthenticatedButtons from './UnauthenticatedButtons';
 import AuthenticatedButtons from './AuthenticatedButtons';

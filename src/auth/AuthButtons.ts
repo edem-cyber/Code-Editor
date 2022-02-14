@@ -8,4 +8,5 @@ export const AuthButton = styled(Button)({
   color: 'white',
   height: 48,
   padding: '0 30px',
+  marginLeft: '20px'
 });

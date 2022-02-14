@@ -14,7 +14,6 @@ const CustomThemeProvider = (props: PropsWithChildren<{}>) => {
     },
     background: darkMode ? darkModeColors.background : appColors.background,
     font: darkMode ? 'white' : appColors.font,
-    button: 'white',
     // darkModeColors.font does not work on font
   });
   return <ThemeProvider theme={theme}>{props.children}</ThemeProvider>;
@@ -25,12 +24,10 @@ declare module '@material-ui/core/styles' {
   interface Theme {
     background: string;
     font: string;
-    button: string;
   }
 
   interface ThemeOptions {
     background: string;
     font: string;
-    button: string;
   }
 }
