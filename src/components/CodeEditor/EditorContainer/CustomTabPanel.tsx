@@ -7,19 +7,19 @@ interface Props {
   editorActiveFile: string | null;
 }
 const CustomTabPanel = (props: Props) => {
-  const classes = usestyles();
+  const classes = useStyles();
   const {
     activeFile: { id: activeFileId },
     editorActiveFile,
   } = props;
   return (
-    <div className={classes.root} role="tabpanel" hidden={ editorActiveFile!== activeFileId}> 
-      CustomTabPanel
+    <div className={classes.root} role="tabpanel" hidden={editorActiveFile !== activeFileId}>
+        Monaco Code Editor
     </div>
   );
 };
 
-const usestyles = makeStyles(() => ({
+const useStyles = makeStyles(() => ({
   root: {
     height: '100%',
   },

@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
 import FileViewer from '../../../components/CodeEditor/FileViewer/FileViewer';
+import EditorContainer from '../../../components/CodeEditor/EditorContainer/EditorContainer';
 
 const CodeEditor = () => {
   const classes = useStyles();
@@ -9,7 +10,9 @@ const CodeEditor = () => {
       <div className={classes.fileViewer}>
         <FileViewer />
       </div>
-      <div className={classes.codeEditorContainer}>Editor container</div>
+      <div className={classes.codeEditorContainer}>
+        <EditorContainer />
+      </div>
     </div>
   );
 };

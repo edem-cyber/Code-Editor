@@ -3,6 +3,8 @@ import { AppBar, makeStyles, Tab, Tabs } from '@material-ui/core';
 import { useAppSelector, useAppDispatch } from '../../../store/hooks';
 import selectActiveFiles from '../../../store/selectors/selectActiveFiles/selectActiveFiles';
 import { setEditorActiveFile } from '../../../store/reducers/files/reducer';
+import CustomTabPanel from './CustomTabPanel';
+import CustomTabLabel from './CustomTabLabel';
 
 const EditorContainer = () => {
   const classes = useStyles();
@@ -15,7 +17,7 @@ const EditorContainer = () => {
   }
 
   const onTabClick = (event: ChangeEvent<{}>, tabPosition: number) => {
-    console.log('foo');
+    // console.log('foo');
     const activeFileId = activeFilesIds[tabPosition];
     if (activeFileId !== editorActiveFile) {
       dispatch(setEditorActiveFile(activeFileId));
@@ -33,13 +35,12 @@ const EditorContainer = () => {
           onChange={onTabClick}
         >
           {activeFiles.map((activeFile) => {
-            return <Tab key={activeFile.id} label="foo" />;
+            return <Tab key={activeFile.id} label={<CustomTabLabel activeFile={activeFile}/>} />;
           })}
         </Tabs>
       </AppBar>
-
       {activeFiles.map((activeFile) => {
-        return <TabPanel key={activeFile.id} />;
+        return <CustomTabPanel activeFile={activeFile} editorActiveFile={editorActiveFile} key={activeFile.id} />;
       })}
     </div>
   );
