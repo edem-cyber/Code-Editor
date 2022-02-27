@@ -8,6 +8,7 @@ const supportedExtensions: { [key: string]: string } = {
   java: 'java',
   go: 'go',
   html: 'html',
+  php: 'php',
   css: 'css',
   json: 'json',
 };
