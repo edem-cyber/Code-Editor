@@ -2,6 +2,8 @@
 
 Auth0 for authentication
 
+Styled components for styles
+
 Monaco plugin for code editor
 
 
