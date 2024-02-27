@@ -1,10 +1,6 @@
-#React Code Editor. 
+Web Code Editor Made with React
 
-Auth0 for authentication
-
-Styled components for styles
-
-Monaco plugin for code editor
+Auth0, Styled components, Monaco for VSCode like code editor
 
 
 
